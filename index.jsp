@@ -1,17 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Welcome Page</title>
+<meta charset="ISO-8859-1">
+<title>Index</title>
 </head>
 <body>
-<h2>Hello World!</h2>
-  <p>Today's date is: <% out.print(new java.util.Date()); %></p>
-   <h1>Registration Form</h1>
-     <form action="process.jsp" method="POST">
-       <label for="name">Name:</label>
-       <input type="text" name="name" id="name" required><br>
-       <label for="email">Email:</label>
-       <input type="email" name="email" id="email" required><br>
-       <input type="submit" value="Submit">
-     </form>
+  <a href="FetchData">Records</a>
 </body>
 </html>
