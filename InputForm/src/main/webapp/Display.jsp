@@ -17,5 +17,7 @@ String email=(String)request.getAttribute("email");
 <p><%=name %></p>
 <label>Email:</label>
 <p><%=email %></p>
+
+
 </body>
 </html>

@@ -36,13 +36,19 @@ throws ServletException, IOException
       request.setAttribute("password", password);
       request.setAttribute("name", name);
       request.setAttribute("email", email);
-      
-      RequestDispatcher rd =request.getRequestDispatcher("Display.jsp");
-      rd.forward(request, response); 
+      if(password.length()<=8 && password!=null) {
+    	  out.println("<p style=color:red; font-weigth:bold;>Password should be greater or equal to 8.</p>");
+    	  response.sendRedirect("Input.jsp?error=1");
+      }else {
+    	  RequestDispatcher rd =request.getRequestDispatcher("Display.jsp");
+          rd.forward(request, response); 
+
+      }
 
       out.println("</body>"); 
 
       out.println("</html>"); 
+      
     }
 }
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
